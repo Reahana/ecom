@@ -1,6 +1,6 @@
 @extends('front.master')
 @section('title')
-
+Molla || Home
 @endsection
 
 
