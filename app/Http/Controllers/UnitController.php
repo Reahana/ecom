@@ -41,7 +41,7 @@ class UnitController extends Controller
 
     public function delete(Request $request, $id)
     {
-        Brand::deleteBrand($id);
-        return redirect('/manage-brand')->with('message', 'Brand info delete successfully');
+        Unit::deleteUnit($id);
+        return redirect('/manage-unit')->with('message', 'Unit info delete successfully');
     }
 }
