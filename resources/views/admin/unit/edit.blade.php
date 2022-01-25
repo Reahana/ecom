@@ -24,18 +24,18 @@
                             </button>
                         </div>
                     @endif
-                    <form class="form-horizontal" action="{{route('unit.new', ['id' => $unit->id])}}" method="POST">
+                    <form class="form-horizontal" action="{{route('unit.update', ['id' => $unit->id])}}" method="POST">
                         @csrf
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Unit Name</label>
                             <div class="col-sm-10">
-                                <input class="form-control" type="text"  value="{{$unit->name}} name="name" placeholder="Unit Name"/>
+                                <input class="form-control" type="text"  value="{{$unit->name}}" name="name" placeholder="Unit Name"/>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Unit Description</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" name="description" value="{{$unit->description}} placeholder="Unit Description"></textarea>
+                                <textarea class="form-control" name="description"  placeholder="Unit Description">{{$unit->description}}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
