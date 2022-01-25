@@ -35,7 +35,7 @@
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Brand Description</label>
                             <div class="col-sm-10">
-                                <textarea class="form-control" name="description" value="{{$brand->description}} placeholder="Brand Description"></textarea>
+                                <textarea class="form-control" name="description" placeholder="Brand Description">{{$brand->description}}</textarea>
                             </div>
                         </div>
                         <div class="form-group row">
