@@ -296,7 +296,7 @@ Route::post('/update-product/{id}', [
 ]);
 
 Route::post('/delete-product/{id}', [
-    'uses' => 'App\Http\Controllers\UnitController@delete',
+    'uses' => 'App\Http\Controllers\ProductController@delete',
     'as'   => 'product.delete',
     'middleware' => ['auth:sanctum', 'verified']
 ]);
