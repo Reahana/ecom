@@ -50,7 +50,13 @@ class ProductController extends Controller
     public function manage()
     {
         $this->products = Product::orderBy('id', 'desc')->get();
-        return view('admin.product.manage', ['products' => $this->products]);
+        return view('admin.product.manage', [
+            'products' => $this->products,
+//            'categories'    =>  Category::all(),
+//            'subCategories' =>  SubCategory::all(),
+//            'brands'  => Brand::all(),
+//            'units'    => Unit::all()
+        ]);
     }
 
     public function edit($id)

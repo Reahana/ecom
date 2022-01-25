@@ -89,4 +89,16 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\Category');
     }
+    public function subcategory ()
+    {
+        return $this->belongsTo('App\Models\SubCategory');
+    }
+    public  function  brand()
+    {
+        return $this->belongsTo('App\Models\Brand');
+    }
+    public function unit ()
+    {
+        return $this->belongsTo('App\Models\Unit');
+    }
 }
