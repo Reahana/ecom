@@ -1,5 +1,5 @@
 # ecom
-a e commerce project with laravel
+A e commerce project with laravel
 
 
 my first e commerce project
