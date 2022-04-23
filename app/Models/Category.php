@@ -32,7 +32,8 @@ class Category extends Model
         }
     }
 
-    public static function newCategory($request)
+    
+public static function newCategory($request)
     {
         self::$category = new Category();
         self::$category->name           = $request->name;
@@ -42,7 +43,9 @@ class Category extends Model
         self::$category->save();
     }
 
-    public static function updateCategory($request, $id)
+ 
+
+   public static function updateCategory($request, $id)
     {
         self::$category = Category::find($id);
 
@@ -67,9 +70,13 @@ class Category extends Model
         self::$category->save();
     }
 
-    public static function deleteCategory($id)
+   
+
+
+ public static function deleteCategory($id)
     {
-        self::$category = Category::find($id);
+   
+     self::$category = Category::find($id);
         if(file_exists(self::$category->image))
         {
             unlink(self::$category->image);
