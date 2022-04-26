@@ -18,19 +18,26 @@ class SubCategoryController extends Controller
         return view('admin.sub-category.add', ['categories' => $this->categories]);
     }
 
-    public function create(Request $request)
+  
+ 
+ public function create(Request $request)
     {
         SubCategory::newSubCategory($request);
         return redirect()->back()->with('message', 'Sub category info create successfully');
     }
 
-    public function manage()
+  
+
+
+  public function manage()
     {
         $this->subCategories = SubCategory::orderBy('id', 'desc')->get();
         return view('admin.sub-category.manage', ['subCategories' => $this->subCategories]);
     }
 
-    public function edit($id)
+ 
+
+   public function edit($id)
     {
         $this->subCategory = SubCategory::find($id);
         $this->categories  = Category::all();
@@ -40,13 +47,17 @@ class SubCategoryController extends Controller
         ]);
     }
 
-    public function update(Request $request, $id)
+  
+
+  public function update(Request $request, $id)
     {
         SubCategory::updateSubCategory($request, $id);
         return redirect('/manage-sub-category')->with('message', 'Sub category info update successfully');
     }
 
-    public function delete(Request $request, $id)
+   
+
+ public function delete(Request $request, $id)
     {
         SubCategory::deleteSubCategory($id);
         return redirect('/manage-sub-category')->with('message', 'Sub category info delete successfully');
