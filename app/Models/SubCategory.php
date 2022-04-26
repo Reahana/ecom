@@ -43,11 +43,13 @@ class SubCategory extends Model
         self::$subCategory->save();
     }
 
-    public static function updateSubCategory($request, $id)
+    
+public static function updateSubCategory($request, $id)
     {
         self::$subCategory = SubCategory::find($id);
 
-        self::$image = $request->file('image');
+     
+   self::$image = $request->file('image');
         if(self::$image)
         {
             if(file_exists(self::$subCategory->image))
@@ -69,7 +71,8 @@ class SubCategory extends Model
         self::$subCategory->save();
     }
 
-    public static function deleteSubCategory($id)
+    
+public static function deleteSubCategory($id)
     {
         self::$subCategory = SubCategory::find($id);
         if(file_exists(self::$subCategory->image))
@@ -79,7 +82,8 @@ class SubCategory extends Model
         self::$subCategory->delete();
     }
 
-    public function category ()
+    
+public function category ()
     {
         return $this->belongsTo('App\Models\Category');
     }
