@@ -96,7 +96,8 @@ public static function newCategory($request)
         self::$category->delete();
     }
 
-    public function subCategory()
+   
+ public function subCategory()
     {
         return $this->hasMany('App\Models\SubCategory');
     }
