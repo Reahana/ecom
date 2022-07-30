@@ -98,7 +98,7 @@ public static function newCategory($request)
 
    
  public function subCategory()
-    {
-        return $this->hasMany('App\Models\SubCategory');
-    }
+{
+    return $this->hasMany('App\Models\SubCategory');
+}
 }
